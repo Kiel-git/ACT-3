@@ -1,0 +1,2 @@
+Explanation:
+Using htmlspecialchars($_SERVER["PHP_SELF"]) for the form's action ensures that the form submits to the same page while encoding special characters to harmless HTML entities. This prevents Cross-Site Scripting (XSS) attacks. If an attacker tries to inject malicious code through the URL, htmlspecialchars() will convert special characters (like <, >, ", etc.) into their HTML entity equivalents (like &lt;, &gt;, &quot;), thus neutralizing any script or malicious content. This practice helps maintain the security and integrity of form submissions.
